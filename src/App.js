@@ -2,18 +2,22 @@ import React from 'react';
 //components
 import MyNavbar from "./components/my-navbar/my.navbar.components";
 import profile from './assets/img/profile/Profile-img.png';
-
+import Typical from 'react-typical';
+import About from './pages/about/about.component';
 import './App.css';
-import Typical from 'react-typical'
+
+
  const App = () => {
   return (
      
   
-  <div className='App'>
+  <div className='App' style={{ position: "relative"}}>
     <MyNavbar />
+    {/* about me section */}
+    
   <header className='App-header'>
     <img src={profile} className='App-profile' alt='profile'/>
-  
+  <div>
     <h1>Hi, I'm Sruthy Muraleedharan</h1>
     <p> I'm a{' '}
       <Typical
@@ -30,8 +34,16 @@ import Typical from 'react-typical'
           1000
          ]}/>
     </p>
-    </header>
     </div>
+    </header>
+    
+<div>
+  <container>
+    <About />
+  </container>
+</div>
+</div>
+    
   );
   
 }
